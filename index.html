@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Santa Biblia - Lleva la palabra de Dios contigo</title>
+    <meta name="description" content="Descarga Santa Biblia para Android. Lectura fácil, rápida y sin distracciones.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-purple-mid: #5e2e60;
+            --bg-purple-dark: #2E0A30;
+            --accent-gold: #FFD700;
+            --text-dark: #4A144B;
+            --text-white: #FFFFFF;
+            --text-opacity: rgba(255, 255, 255, 0.85);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: radial-gradient(circle at top, var(--bg-purple-mid), var(--bg-purple-dark));
+            background-attachment: fixed;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-white);
+            text-align: center;
+            padding: 2rem;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 400px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        /* Hero Element (The Icon) */
+        .hero-container {
+            position: relative;
+            width: 180px;
+            height: 180px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        /* Antigravity Glow Effect */
+        .glow-halo {
+            position: absolute;
+            width: 250px;
+            height: 250px;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 70%);
+            border-radius: 50%;
+            z-index: 1;
+            animation: pulse-glow 3s infinite ease-in-out;
+            pointer-events: none;
+        }
+
+        /* Floating Icon */
+        .app-icon {
+            position: relative;
+            width: 160px;
+            height: 160px;
+            border-radius: 35px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+            z-index: 2;
+            animation: float-icon 4s infinite ease-in-out;
+            object-fit: cover;
+        }
+
+        /* Typography */
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 0.5rem;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .description {
+            font-size: 1.1rem;
+            color: var(--text-opacity);
+            line-height: 1.5;
+            margin-bottom: 1.5rem;
+            padding: 0 10px;
+        }
+
+        /* CTA Button */
+        .cta-button {
+            background-color: var(--accent-gold);
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            padding: 1.2rem 2.5rem;
+            border-radius: 50px;
+            /* Pill shape */
+            width: 100%;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+            background-color: #ffd91a;
+        }
+
+        .cta-button:active {
+            transform: translateY(-1px);
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Footer */
+        footer {
+            margin-top: auto;
+            padding-top: 3rem;
+            font-size: 0.85rem;
+            opacity: 0.6;
+        }
+
+        /* Animations */
+        @keyframes pulse-glow {
+            0% {
+                transform: scale(0.85);
+                opacity: 0.3;
+            }
+
+            50% {
+                transform: scale(1.1);
+                opacity: 0.6;
+            }
+
+            100% {
+                transform: scale(0.85);
+                opacity: 0.3;
+            }
+        }
+
+        @keyframes float-icon {
+            0% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-15px);
+            }
+
+            100% {
+                transform: translateY(0px);
+            }
+        }
+
+        /* Mobile Optimization */
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .description {
+                font-size: 1rem;
+            }
+
+            .app-icon {
+                width: 140px;
+                height: 140px;
+            }
+
+            .glow-halo {
+                width: 220px;
+                height: 220px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <!-- Hero Section -->
+        <div class="hero-container">
+            <div class="glow-halo"></div>
+            <img src="icon.png" alt="Santa Biblia Logo" class="app-icon">
+        </div>
+
+        <!-- Content Section -->
+        <div class="content">
+            <h1>SANTA BIBLIA</h1>
+            <p class="description">
+                Lleva la palabra de Dios contigo a donde vayas.<br>
+                Lectura fácil, rápida y sin distracciones.
+            </p>
+        </div>
+
+        <!-- CTA Section -->
+        <a href="https://play.google.com/store/apps/details?id=com.pericom.santabibliainteractiva" class="cta-button">
+            DESCARGAR EN ANDROID
+        </a>
+
+        <!-- Footer -->
+        <footer>
+            Desarrollado por Pericom
+        </footer>
+    </div>
+
+</body>
+
+</html>
